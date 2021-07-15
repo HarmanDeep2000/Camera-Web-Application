@@ -1,0 +1,124 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: black;
+}
+
+#record,
+#capture {
+  height: 5rem;
+  width: 5rem;
+  border-radius: 50%;
+  outline: none;
+  border: none;
+  position: fixed;
+  border: 5px solid white;
+  background: black;
+  z-index: 3;
+}
+
+#record {
+  top: 30vh;
+  right: 20px;
+}
+
+#record div {
+  height: 60%;
+  width: 68%;
+  margin: auto;
+  border-radius: 50%;
+  background: red;
+}
+
+#capture div {
+  height: 60%;
+  width: 68%;
+  margin: auto;
+  border-radius: 50%;
+  background: white;
+}
+
+#capture {
+  right: 20px;
+  top: 48vh;
+}
+
+#video-container {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+video {
+  height: 100%;
+  width: 100%;
+}
+
+.record-animation {
+  animation: zoom-in-out 0.8s infinite;
+}
+.capture-animation {
+  animation: zoom-in-out 1s;
+}
+
+@keyframes zoom-in-out {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.filter-container {
+  width: 6rem;
+  height: 60vh;
+  border: 1px solid white;
+  position: fixed;
+  top: 20vh;
+  left: 20px;
+  z-index: 3;
+}
+
+.filter {
+  width: 100%;
+  height: calc(100% / 6);
+  border: 1px solid white;
+  background-image: url(https://wallup.net/wp-content/uploads/2019/05/10/197442-nature-mountain-forest-landscape-fog-lake-ultrahd-4k-wallpaper-748x498.jpg);
+  background-size: cover;
+}
+
+.filter-div {
+  height: 100vh;
+  width: 100vw;
+  /* background: red; */
+  position: fixed;
+  top: 0;
+  z-index: 0;
+}
+
+
+.zoom-container{
+  height: 8rem;
+  width: 12vh;
+  position: fixed;
+  top: 3vh;
+  right: 20px;
+}
+
+.zoom-container div{
+  height: 50%;
+  width: 100%;
+  color: white;
+  font-size: 3.8rem;
+  text-align: center;
+  font-weight: bold;
+  background-color: #57606f;
+}
+
